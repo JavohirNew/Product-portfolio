@@ -1,0 +1,213 @@
+:root {
+    --main-green: #02897A;
+    --main-blue: #173A56;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+li {
+    list-style-type: none;
+}
+                    /* Methods for myself */
+
+.grid{
+    display: grid;
+}
+
+                     /* Header > nav*/
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav{
+    height: 8vh;
+    /* display: grid; */
+    grid-template-columns: 1fr 4fr 2.2fr;
+    align-items: center;
+    justify-items: end;
+}
+.logo{
+    /* display: grid; */
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    
+}
+.logo>span{
+    position: relative;
+    top: -3px;
+    color: rgb(57, 70, 110);
+    font-size: 30px;
+    font-weight: 900;
+    padding-left: 1.5vw;
+}
+.nav-menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 10px;
+}
+.nav-menu>li{
+    text-align: center;
+    margin: 0 1vw;
+}
+.nav-menu > li > a{
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+}
+.nav-menu > li:first-child{
+    color: black;
+    /* font-weight: bolder; */
+}
+.reg-buttons{
+    /* display: grid; */
+    grid-template-columns: 2fr 2fr 1fr;
+    align-items: center;
+    grid-column-gap: 1.5vw;
+}
+.sign-in, .sign-up{
+    padding: 8px 15px;
+    border-radius: 10%;
+    text-align: center;
+    font-weight: 600;
+}
+.sign-in{
+    border: 1px solid #939998;
+    color: #173A56;
+}
+.sign-up{
+    background: #02897A;
+    color: white;
+}
+
+/* Header > banner */
+
+.banner{
+    /* display: grid; */
+    grid-template-columns: 4fr 5fr;
+    grid-template-rows: 600px;
+    align-items: center;
+    justify-items: center;
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+
+.banner-text{
+    display: block;
+    padding-bottom: 5vh;
+    
+}
+.banner-text > h1 {
+    color: #22343D;
+    font-size: 38px;
+    font-weight: 900;
+    margin-bottom: 5vh;
+}
+.banner-text > p{
+    color: #22343D;
+    line-height: 4vh;
+    font-size: large;
+    padding-bottom: 5vh;
+}
+.wrap-buttons{
+    display: block;
+    margin-top: 8vh;
+}
+.btn-get-started{
+    background: #02897A;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.fa-play{
+    padding-right: 1vw;
+}
+.btn-watch-the-video{
+    position: absolute;
+    color: #02897A;
+    text-decoration: underline;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.banner-image{
+    background-image: url(../images/banner.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding-left: 4vw;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+    .container{
+        width: 95%;
+    }
+    
+}
+@media (max-width: 750px) {
+    .container{
+        width: 100%;
+    }
+    nav{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 0.4vh;
+    }
+    nav>a{
+        padding-left: 15px;;
+    }
+    nav > a > img {
+        width: 35px;
+        height: 35px;
+    }
+    .nav-menu{
+        grid-row: 2/3;
+        grid-area: 2/1/4/4;
+        margin: 0 auto;
+        justify-content: space-evenly;
+    }
+    .nav-menu>li{
+        height: 16px;
+    }
+
+              /* Banner */
+    .banner{
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(300px, 1fr) minmax(300px, 1fr);
+    }
+    .wrap-buttons{
+        margin-left: 5vw;
+    }
+}
+@media (max-width: 430px){
+    .sign-in, .sign-up{
+        padding: 4px 6px;
+    }
+    
+    .btn-watch-the-video{
+        margin-left: 1vw;
+    }
+}
